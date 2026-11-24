@@ -1,0 +1,36 @@
+// Area calculator
+#include <stdio.h>
+void sqr(float a,float b);
+void circle(float a);
+int main()
+{
+    float l,b,r;
+    char shape;
+    printf("choose any shape out of[circle,square,rectangle]:");
+    scanf("%c",&shape);
+    if(shape=='s'){
+        printf("\nEnter length and length:");
+        scanf(" %f%f",&l,&b);
+        sqr(l,b);
+    }
+    else if(shape=='r'){
+        printf("\nEnter length and breath of the shape:");
+        scanf(" %f%f",&l,&b);
+        sqr(l,b);
+    }
+    else if(shape=='c'){
+        printf("\nEnter radius of circle:");
+        scanf(" %f",&r);
+        circle(r);
+    }
+    else{
+        printf("invalid shape");
+    }
+    return(0);
+}
+void sqr(float a,float b){
+    printf("Area=%f",a*b);
+}
+void circle(float a){
+    printf("Area=%f",3.14*a*a);
+}
